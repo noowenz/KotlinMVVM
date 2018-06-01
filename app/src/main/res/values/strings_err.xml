@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="err_no_internet">No Internet Available</string>
+    <string name="err_connection_time_out">Connection Timeout</string>
+    <string name="err_something_went_wrong">Something went wrong.</string>
+    <string name="err_no_data_available">No data available.</string>
+
+    <string name="err_invalid_email">Please enter valid email address.</string>
+    <string name="err_invalid_password">Password must be greater than 6 and less than 18 characters.</string>
+    <string name="err_password_mismatch">Password do not match.</string>
+    <string name="err_invalid_phone">Please enter valid contact number.</string>
+    <string name="err_max_photo">You can select only 6 photos.</string>
+    <string name="err_no_infringements">No infringements to show.</string>
+    <string name="err_no_notifications">No notifications to show.</string>
+    <string name="err_no_income_list">No monthly income list to show.</string>
+    <string name="err_invalid_bsb">BSB Number is incorrect.</string>
+    <string name="err_empty_goal">Please enter goal for this month.</string>
+    <string name="err_invalid_goal">Please enter valid goal for this month.</string>
+
+</resources>

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "432574819485",
+    "firebase_url": "https://rangerx-bab67.firebaseio.com",
+    "project_id": "rangerx-bab67",
+    "storage_bucket": "rangerx-bab67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432574819485:android:2029746d8a245aac",
+        "android_client_info": {
+          "package_name": "au.com.official.nwz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432574819485-lgr5aan7k3t16p1r4gmeq29s5l8qmpp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5TJ8wMupVuH8djyDv6VTywaC_LretcB0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432574819485:android:b0f2b9a93f0a6a7c",
+        "android_client_info": {
+          "package_name": "com.ranger.RangerXApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432574819485-lgr5aan7k3t16p1r4gmeq29s5l8qmpp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5TJ8wMupVuH8djyDv6VTywaC_LretcB0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

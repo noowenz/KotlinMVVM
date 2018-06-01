@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="card_type">
+        <item>G</item>
+        <item>B</item>
+        <item>Y</item>
+    </string-array>
+
+    <string-array name="bank_holder_type">
+        <item>personal</item>
+        <item>business</item>
+    </string-array>
+
+    <string-array name="account_type">
+        <item>savings</item>
+        <item>checking</item>
+    </string-array>
+</resources>

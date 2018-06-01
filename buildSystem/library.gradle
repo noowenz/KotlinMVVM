@@ -1,0 +1,183 @@
+ext {
+    versions = [
+            architectureComponentVersion: "1.1.0",
+
+            brainTreeDropInVersion      : "3.0.8",
+            brainTreeVersion            : "2.5.4",
+            butterKnifeVersion          : "8.8.1",
+
+            circleImageViewVersion      : "2.1.0",
+            constraintLayoutVersion     : "1.1.0-beta5",
+            crashlyticsVersion          : "2.9.1@aar",
+
+            daggerVersion               : "2.15",
+
+            easyPermissionVersion       : "0.2.1",
+            espressoVersion             : "2.2.2",
+            espressoCoreVersion         : "3.0.1",
+
+            fabVersion                  : "1.6.4",
+            facebookVersion             : "4.22.1",
+            flowLayoutVersion           : "3.1.0",
+
+            glideVersion                : "3.7.0",
+            glideTransformationVersion  : "2.0.1",
+            gradleVersion               : "3.1.2",
+            gsonVersion                 : "2.8.1",
+            gsonConverterVersion        : "2.3.0",
+
+            hamcrestVersion             : "1.3",
+            helpShiftVersion            : "4.8.0",
+
+            imageCropperVersion         : "2.4.6",
+
+            jsrVersion                  : "1.0",
+            junitVersion                : "4.12",
+
+            kotlinVersion               : "1.2.41",
+
+            leakCanaryVersion           : "1.5",
+            libPhoneNumberVersion       : "8.4.1",
+
+            mockitoVersion              : "1.10.19",
+            multidexVersion             : "1.0.3",
+
+            okhttpVersion               : "3.8.1",
+
+            picassoVersion              : "2.71828",
+            playServiceVersion          : "15.0.0",
+            powerMockito                : "1.6.2",
+
+            rangeselectorVersion        : "1.1.3",
+            retrofitVersion             : "2.3.0",
+            rulesVersion                : "0.4.1",
+            runnerVersion               : "0.4.1",
+            rxJavaVersion               : "2.1.10",
+            rxAndroidVersion            : "2.0.2",
+            rxJavaAdapterVersion        : "1.0.0",
+
+            saripaarVerson              : "2.0.3",
+            smackVersion                : "4.2.0",
+            supportLibraryVersion       : "27.1.1",
+
+            testRunnerVersion           : "1.0.1",
+            tooltipVersion              : "0.1.5",
+
+            universalImageLoaderVersion : "1.9.4",
+
+    ]
+
+    libraries = [
+            androidTests = [
+                    testRunner  : "com.android.support.test:runner:$versions.runnerVersion",
+                    espressoCore: "com.android.support.test.espresso:espresso-core:$versions.espressoCoreVersion",
+            ],
+
+            architectureComponents = [
+                    extensions        : "android.arch.lifecycle:extensions:$versions.architectureComponentVersion",
+                    extensionsCompiler: "android.arch.lifecycle:compiler:$versions.architectureComponentVersion",
+                    room              : "android.arch.persistence.room:runtime:$versions.architectureComponentVersion",
+                    roomCompiler      : "android.arch.persistence.room:compiler:$versions.architectureComponentVersion",
+                    roomRxjava2           : "android.arch.persistence.room:rxjava2:$versions.architectureComponentVersion",
+            ],
+
+            braintree = [
+                    dropIn   : "com.braintreepayments.api:drop-in:$versions.brainTreeDropInVersion",
+                    brainTree: "com.braintreepayments.api:braintree:$versions.brainTreeVersion",
+            ],
+
+            crashReporting = [
+                    crashlyitcs: "com.crashlytics.sdk.android:crashlytics:$versions.crashlyticsVersion",
+            ],
+
+            databinding = [
+                    compiler: "com.android.databinding:compiler:$versions.gradleVersion"
+            ],
+
+            facebook = [
+                    facebookAndroidSdk: "com.facebook.android:facebook-android-sdk:$versions.facebookVersion",
+            ],
+
+            google = [
+                    googlePlaces            : "com.google.android.gms:play-services-places:$versions.playServiceVersion",
+                    googleLocation          : "com.google.android.gms:play-services-location:$versions.playServiceVersion",
+                    firebaseCore            : "com.google.firebase:firebase-core:$versions.playServiceVersion",
+                    firebaseInvites         : "com.google.firebase:firebase-invites:$versions.playServiceVersion",
+                    firebasePushNotification: "com.google.firebase:firebase-messaging:$versions.playServiceVersion",
+
+                    libPhoneNumber          : "com.googlecode.libphonenumber:libphonenumber:$versions.libPhoneNumberVersion",
+            ],
+
+            injection = [
+                    butterKnife           : "com.jakewharton:butterknife:$versions.butterKnifeVersion",
+                    butterKnifeCompiler   : "com.jakewharton:butterknife-compiler:$versions.butterKnifeVersion",
+                    dagger                : "com.google.dagger:dagger:$versions.daggerVersion",
+                    daggerAndroidSupport  : "com.google.dagger:dagger-android-support:$versions.daggerVersion",
+                    daggerCompiler        : "com.google.dagger:dagger-compiler:$versions.daggerVersion",
+                    daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$versions.daggerVersion",
+            ],
+
+            image = [
+                    circleImageView    : "de.hdodenhof:circleimageview:$versions.circleImageViewVersion",
+                    picasso            : "com.squareup.picasso:picasso:$versions.picassoVersion",
+                    glide              : "com.github.bumptech.glide:glide:$versions.glideVersion",
+                    androidImageCropper: "com.theartofdev.edmodo:android-image-cropper:$versions.imageCropperVersion",
+            ],
+
+            kt = [
+                    kotlinGradlePlugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinVersion",
+                    kotlinStdLib      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+            ],
+
+            networking = [
+                    retrofit2         : "com.squareup.retrofit2:retrofit:$versions.retrofitVersion",
+                    okhttp3           : "com.squareup.okhttp3:okhttp:$versions.okhttpVersion",
+                    loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion",
+                    gson              : "com.google.code.gson:gson:$versions.gsonVersion",
+                    gsonConverter     : "com.squareup.retrofit2:converter-gson:$versions.gsonConverterVersion",
+            ],
+
+            rx = [
+                    rxAndroid    : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVersion",
+                    // Because RxAndroid releases are few and far between, it is recommended you also
+                    // explicitly depend on RxJava's latest version for bug fixes and new features.
+                    rxJava       : "io.reactivex.rxjava2:rxjava:$versions.rxJavaVersion",
+                    rxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$versions.rxJavaAdapterVersion"
+            ],
+
+            smack = [
+                    smackTcp              : "org.igniterealtime.smack:smack-tcp:$versions.smackVersion",
+                    // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
+                    smackIm               : "org.igniterealtime.smack:smack-im:$versions.smackVersion",
+                    smackAndroidExtensions: "org.igniterealtime.smack:smack-android-extensions:$versions.smackVersion",
+            ],
+
+            support = [
+                    appCompat             : "com.android.support:appcompat-v7:$versions.supportLibraryVersion",
+                    design                : "com.android.support:design:$versions.supportLibraryVersion",
+                    recyclerView          : "com.android.support:recyclerview-v7:$versions.supportLibraryVersion",
+                    cardView              : "com.android.support:cardview-v7:$versions.supportLibraryVersion",
+                    palette               : "com.android.support:palette-v7:$versions.supportLibraryVersion",
+                    constraintLayout      : "com.android.support.constraint:constraint-layout:$versions.constraintLayoutVersion",
+
+                    supportV4             : "com.android.support:support-v4:$versions.supportLibraryVersion",
+                    supportVectorDrawable : "com.android.support:support-vector-drawable:$versions.supportLibraryVersion",
+                    exifInterface         : "com.android.support:exifinterface:$versions.supportLibraryVersion",
+                    animatedVectorDrawable: "com.android.support:animated-vector-drawable:$versions.supportLibraryVersion",
+                    customTabs            : "com.android.support:customtabs:$versions.supportLibraryVersion",
+
+                    multidex              : "com.android.support:multidex:$versions.multidexVersion",
+            ],
+
+            tests = [
+                    jUnit: "junit:junit:$versions.junitVersion",
+            ],
+
+            ui = [
+                    fab                : "com.github.clans:fab:$versions.fabVersion",
+                    toolTip            : "com.fenchtose:tooltip:$versions.tooltipVersion",
+                    crystalRangeSeekbar: "com.crystal:crystalrangeseekbar:$versions.rangeselectorVersion",
+                    flowLayout         : "cn.lankton:flowlayout:$versions.flowLayoutVersion",
+            ],
+    ]
+}

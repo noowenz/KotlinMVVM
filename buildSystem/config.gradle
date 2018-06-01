@@ -1,0 +1,29 @@
+ext {
+    appConfiguration = [
+            applicationId       : "au.com.official.nwz",
+            // Sdk and tools
+            minSdkVersion       : 17,
+            targetSdkVersion    : 27,
+            compileSdkVersion   : 27,
+            buildToolsVersion   : "27.0.3",
+
+            appMajorVersion     : 0,
+            appMinorVersion     : 0,
+            appPatchVersion     : 1,
+            appVersionClassifier: "beta",
+    ]
+
+    buildVersionCode = {
+        return appConfiguration.appMajorVersion * 100000 + appConfiguration.appMinorVersion * 100 + appConfiguration.appPatchVersion
+    }
+
+    buildVersionName = {
+        String versionName = "${appConfiguration.appMajorVersion}.${appConfiguration.appMinorVersion}.${appConfiguration.appPatchVersion}"
+        if (appConfiguration.appVersionClassifier != null && !appConfiguration.appVersionClassifier.isEmpty()) {
+            versionName = versionName + "_" + appConfiguration.appVersionClassifier
+        }
+        return versionName
+    }
+    //Version name will be: appMajorVersion.appMinorVersion.appPatchVersion_appVersionClassifier
+    //Eg: 0.0.1_beta
+}

@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion appConfiguration.compileSdkVersion
+    buildToolsVersion appConfiguration.buildToolsVersion
+
+    defaultConfig {
+        applicationId appConfiguration.applicationId
+        minSdkVersion appConfiguration.minSdkVersion
+        targetSdkVersion appConfiguration.targetSdkVersion
+        versionCode buildVersionCode()
+        versionName buildVersionName()
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+            buildConfigField("String", "BASE_URL", "\"http://api.football-data.org/v1/\"")
+        }
+
+        release {
+            minifyEnabled true
+            useProguard true
+            buildConfigField("String", "BASE_URL", "\"http://api.football-data.org/v1/\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //support libraries
+    implementation support.appCompat
+    implementation support.constraintLayout
+    implementation support.recyclerView
+    implementation support.cardView
+    implementation support.design
+    implementation support.exifInterface
+    implementation support.supportV4
+    implementation support.multidex
+
+    //Architecture components
+    implementation architectureComponents.extensions
+    kapt architectureComponents.extensionsCompiler
+    implementation architectureComponents.room
+    implementation architectureComponents.roomRxjava2
+    implementation architectureComponents.roomCompiler
+
+    //kotlin
+    implementation kt.kotlinStdLib
+
+    //Networking
+    implementation networking.retrofit2
+    implementation networking.okhttp3
+    implementation networking.loggingInterceptor
+    implementation networking.gson
+    implementation networking.gsonConverter
+
+    //Rx
+    implementation rx.rxJava
+    implementation rx.rxAndroid
+    implementation rx.rxJavaAdapter
+
+    //Injection
+    implementation injection.dagger
+    implementation injection.daggerAndroidSupport
+    kapt injection.daggerCompiler
+    kapt injection.daggerAndroidProcessor
+
+    //Image
+    implementation image.androidImageCropper
+    implementation image.circleImageView
+    implementation image.picasso
+
+    //Google
+    implementation google.googleLocation
+    implementation google.libPhoneNumber
+    implementation google.firebasePushNotification
+
+    //Crashlytics
+    implementation(crashReporting.crashlyitcs) {
+        transitive = true
+    }
+
+    testImplementation tests.jUnit
+    androidTestImplementation androidTests.testRunner
+    androidTestImplementation androidTests.espressoCore
+}
+apply plugin: 'com.google.gms.google-services'

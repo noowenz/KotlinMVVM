@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KotlinMVVM</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_lbl_person_name">Person Name</string>
+    <string name="btn_save_to_db">Save to DB</string>
+    <string name="btn_get_from_db">Get from DB</string>
+    <string name="title_landing">Landing Screen</string>
+    <string name="tv_ok">Ok</string>
+    <string name="enter_person_name">Enter person name</string>
+
+</resources>
