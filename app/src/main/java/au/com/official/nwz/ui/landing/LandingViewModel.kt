@@ -112,35 +112,12 @@ class LandingViewModel
                                 landingClickEvent.value = t.size.toString()
 
                                 Log.d("Fetched competitions", t.toString())
-                                insertCompetitionsToDB(t)
+
                             }
 
                             override fun onError(e: Throwable) {
                                 hideProgressDialog()
                                 handleError(e)
-                            }
-
-                            override fun onComplete() {
-
-                            }
-
-                        }))
-    }
-
-    fun insertCompetitionsToDB(t: List<Competitions>) {
-        compositeDisposable.add(
-                dataManager.insertCompetitions(t)
-                        .subscribeOn(scheduleProvider.io())
-                        .observeOn(scheduleProvider.ui())
-                        .subscribeWith(object : DisposableObserver<Long>() {
-                            override fun onNext(t: Long) {
-                                Log.d("Inserted competitions", t.toString())
-                                getFromDB()
-                            }
-
-                            override fun onError(e: Throwable) {
-                                handleError(e)
-                                setErrorMessage()
                             }
 
                             override fun onComplete() {

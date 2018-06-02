@@ -11,7 +11,4 @@ interface IDbHelper {
     fun getAllPeople(): Observable<MutableList<Person>>
     fun insertPeople(person: Person): Observable<Long>
     fun deleteByUserId(uid: Long): Observable<Int>
-
-    fun getAllCompetitions(): Observable<MutableList<Competitions>>
-    fun insertCompetitions(competitions: List<Competitions>): Observable<Long>
 }

@@ -23,14 +23,6 @@ constructor(
         private val appDbHelper: AppDbHelper,
         private val preferenceHelper: PreferenceHelper): IDataManager{
 
-    override fun getAllCompetitions(): Observable<MutableList<Competitions>> {
-        return appDbHelper.getAllCompetitions()
-    }
-
-    override fun insertCompetitions(competitionsList: List<Competitions>): Observable<Long> {
-        return appDbHelper.insertCompetitions(competitionsList)
-    }
-
     override fun getCompetitions(): Observable<List<Competitions>> {
         return apiService.getCompetitions()
     }

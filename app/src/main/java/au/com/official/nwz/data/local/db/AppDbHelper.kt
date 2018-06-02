@@ -12,15 +12,6 @@ import javax.inject.Singleton
 @Singleton
 class AppDbHelper @Inject
 constructor(val database: AppDatabase): IDbHelper {
-    override fun getAllCompetitions(): Observable<MutableList<Competitions>> {
-        return Observable.fromCallable<MutableList<Competitions>> { database.competitionsDao().getAllCompetitions() }
-    }
-
-    override fun insertCompetitions(competitions: List<Competitions>): Observable<Long> {
-        return Observable.fromCallable<Long> {
-            database.competitionsDao().insertCompetitions(competitions)
-        }
-    }
 
     override fun deleteByUserId(uid: Long): Observable<Int> {
         return Observable.fromCallable<Int> {
